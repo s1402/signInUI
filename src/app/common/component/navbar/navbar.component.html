@@ -1,0 +1,25 @@
+<nav class="navbar-container" [ngClass]="{'flex-end': authService.isUserLoggedIn()}">
+
+    <div *ngIf="!authService.isUserLoggedIn()" class="nav-sign-in">
+        <div *ngIf="getActiveRoute()=='/'">
+            Please Sign In
+        </div>
+        <div *ngIf="getActiveRoute()=='/register'">
+            Please Register
+        </div>
+    </div>
+
+    <div *ngIf="!authService.isUserLoggedIn()" class="nav-register">
+        <div *ngIf="getActiveRoute()=='/'">
+            <a routerLink="/register">Create Account</a> Instead
+        </div>
+        <div *ngIf="getActiveRoute()=='/register'">
+            Already Have an account? <a routerLink="/">Sign In</a> Instead
+        </div>
+    </div>
+
+    <div *ngIf="authService.isUserLoggedIn()" class="nav-logout">
+        <a *ngIf="authService.getTokenDetails()?.isAdmin" routerLink="/admin" class="admin">Admin Panel</a>
+        <a (click)="authService.logout()">Logout</a>
+    </div>
+</nav>

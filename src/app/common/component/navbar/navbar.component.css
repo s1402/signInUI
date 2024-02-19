@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-container {
+    background-color: #7A999C;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-sign-in {
+    font-size: 28px;
+}
+
+.nav-register {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-logout {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.admin {
+    margin-right: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #5F7C8D;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+    .nav-sign-in {
+        font-size: 14px;
+    }
+
+    .nav-register {
+        font-size: 14px;
+    }
+}

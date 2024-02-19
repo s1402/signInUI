@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    background-color: #7A999C;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content {
+    margin: 0;
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

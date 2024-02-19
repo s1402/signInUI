@@ -1,0 +1,57 @@
+<html lang="en">
+
+<body>
+    <form [formGroup]="form" (ngSubmit)="register()">
+        <img class="leaf-img" src="../../assets/images/leaf-img.png" alt="leafImg">
+        <div class="form-container">
+            <div class="alert" [ngClass]="{'hidden': hideAlert}">
+                <span class="close-btn" (click)="closeAlert()">X</span>
+                <h4>Account Created Successfuly!</h4>
+                <p>Please Login to FormSteroids</p>
+            </div>
+            <!----------------- form error ------------------->
+            <span *ngIf="form.errors" class="invalid-user">
+                {{form.errors['error'].error}}
+            </span>
+            <!----------------- email ----------------->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input formControlName="email" name="email" type="text" id="email" class="form-control">
+                <!----------------------- Form Validation Errors ------------------------->
+                <span *ngIf="!email?.valid && email?.touched" class="input-error">
+                    <span *ngIf="email?.errors?.['required']"> {{"error.emailRequired"| translate}}</span>
+                    <span *ngIf="email?.errors?.['email']"> {{"error.invalidEmail"| translate}}</span>
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="username"> Username</label>
+                <input formControlName="username" name="username" type="text" id="username" class="form-control">
+                <!----------------------- Form Validation Errors ------------------------->
+                <span *ngIf="!username?.valid && username?.touched" class="input-error">
+                    <span *ngIf="username?.errors?.['required']"> {{"error.usernameRequired"| translate}}</span>
+                </span>
+            </div>
+            <!----------------- password ----------------->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input formControlName="password" type="password" id="password" name="password" class="form-control">
+                <!----------------------- Form Validation Errors -------------------------------->
+                <span *ngIf="!password?.valid && password?.touched" class="input-error">
+                    <span *ngIf="password?.errors?.['required']"> {{"error.passwordRequired"| translate}}</span>
+                </span>
+            </div>
+            <!----------------- isAdmin ----------------->
+            <div class="admin-checkbox">
+                <input formControlName="isAdmin" name="isAdmin" type="checkbox" id="isAdmin" class="admin-input">
+                <label for="isAdmin" class="admin-label"> Admin?</label>
+            </div>
+
+            <!----------------- Sign In Btn ----------------->
+            <div class="form-group">
+                <button class="signin-btn" type="submit">Create Free Account</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

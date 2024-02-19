@@ -1,0 +1,11 @@
+{
+    "appTitle": "Welcome To FormSteroids",
+    "homeContent": "Thank you for choosing FormSteroids, your ultimate asteroid-blasting experience!",
+    "footerContent": "2024 FormSteroids. All rights reserved.",
+    "error": {
+        "usernameRequired": "Username is required",
+        "passwordRequired": "Password is required",
+        "emailRequired": "Email is required",
+        "invalidEmail": "Email is Invalid"
+    }
+}

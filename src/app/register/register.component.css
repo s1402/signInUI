@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.leaf-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 603px;
+  width: 555px;
+}
+
+form {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-group {
+  margin-top: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  outline: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+label {
+  display: block;
+  color: #282828;
+  margin: 0px 30px 12px 30px;
+  font-weight: 600;
+}
+
+.form-control {
+  padding: 10px;
+  margin: 10px 0px 10px 28px;
+  color: #282828;
+  border-radius: 3px;
+  font-size: 14px;
+  width: 400px;
+  height: 40px;
+  background-color: #fafafa;
+}
+
+.admin-checkbox {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.admin-input {
+  border-radius: 3px;
+  width: 20px;
+  cursor: pointer;
+  background-color: #7A999C;
+  align-items: center;
+}
+
+.admin-input.ng-touched {
+  border: 1px solid #7A999C;
+  width: 100px;
+}
+
+.admin-label {
+  margin: 0px 12px;
+}
+
+.signin-btn {
+  padding: 10px;
+  margin: 10px 0px 10px 28px;
+  border-radius: 3px;
+  font-size: 14px;
+  width: 400px;
+  height: 40px;
+  font-weight: 500;
+  background-color: #7A999C;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5F7C8D;
+}
+
+.form-control.ng-touched.ng-invalid {
+  border: 1px solid #c64442;
+}
+
+.input-error {
+  margin: 0px 27px;
+  color: #c64442;
+}
+
+.invalid-user {
+  background-color: rgba(241, 111, 109, .1);
+  border: solid 1px #f16f6d;
+  color: #c64442;
+  line-height: 1.4;
+  padding: 16px;
+  width: 400px;
+  border-radius: 3px;
+}
+
+.hidden {
+  display: none;
+}
+
+.alert {
+  border: 2px solid #7A999C;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0px 0px;
+}
+
+.alert h4 {
+  margin-top: 0;
+  color: #7A999C;
+}
+
+.alert p {
+  margin-bottom: 0;
+}
+
+.close-btn {
+  cursor: pointer;
+  color: #e74c3c;
+  font-weight: bold;
+  float: right;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 845px) {
+  .leaf-img {
+    width: 325px;
+  }
+
+  .form-control {
+    width: 300px;
+  }
+
+  .signin-btn {
+    width: 300px;
+  }
+}
+
+@media (max-width: 680px) {
+  .leaf-img {
+    width: 225px;
+  }
+
+  .form-control {
+    width: 200px;
+  }
+
+  .signin-btn {
+    width: 200px;
+  }
+}
+
+@media (max-width: 455px) {
+  .leaf-img {
+    width: 125px;
+  }
+
+  .form-control {
+    width: 100px;
+  }
+
+  .signin-btn {
+    width: 100px;
+  }
+
+  .form-group {
+    label {
+      font-size: 9px;
+      font-weight: 700;
+    }
+  }
+
+  .invalid-user {
+    width: 100px;
+    font-size: px;
+  }
+
+  .input-error {
+    font-size: 8px;
+  }
+
+  .admin-input {
+    width: 10px;
+  }
+
+  .admin-label {
+    font-size: 9px;
+  }
+}
