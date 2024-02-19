@@ -3,9 +3,8 @@ import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testin
 import { RegisterComponent } from './register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterService } from '../service/register.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { inject } from '@angular/core';
 import { User } from '../common/enums/User';
 import { of, throwError } from 'rxjs';
 import { CustomError } from '../common/enums/CustomErrors';
