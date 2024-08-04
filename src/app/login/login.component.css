@@ -133,12 +133,11 @@ button:hover {
     width: 100px;
   }
 
-  .form-group {
+  .form-group 
     label {
       font-size: 8px;
       font-weight: 700;
     }
-  }
 
   .invalid-user {
     width: 100px;
