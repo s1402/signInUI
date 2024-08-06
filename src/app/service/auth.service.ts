@@ -11,7 +11,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class AuthService {
 
-  private url: string = "http://localhost:3000/api/auth/";
+  private url: string = "https://signinbe.onrender.com/api/auth/";
   private httpHeaders: HttpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
     "Access-Control-Allow-Origin": "*"
